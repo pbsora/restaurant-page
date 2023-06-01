@@ -6,12 +6,20 @@ export default function page() {
 
   const buttons = document.createElement("div");
   buttons.setAttribute("id", "buttons");
-  content.appendChild(buttons);
-  for (let i = 0; i < 3; i++) {
-    const button = document.createElement("button");
-    button.innerText = `Page${i + 1}`;
-    buttons.appendChild(button);
-  }
+  header.appendChild(buttons);
+
+  const homeBtn = document.createElement("button");
+  homeBtn.innerText = `Home`;
+  homeBtn.setAttribute("class", "homeBtn");
+  const witBtn = document.createElement("button");
+  witBtn.innerText = `What is it?`;
+  witBtn.setAttribute("class", "witBtn");
+  const locationBtn = document.createElement("button");
+  locationBtn.innerText = "Location";
+  locationBtn.setAttribute("class", "locationBtn");
+  buttons.appendChild(homeBtn);
+  buttons.appendChild(witBtn);
+  buttons.appendChild(locationBtn);
 
   const main = document.createElement("div");
   main.setAttribute("id", "main");
